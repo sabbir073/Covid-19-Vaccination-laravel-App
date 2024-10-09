@@ -116,13 +116,15 @@ You can now access the application by visiting [http://127.0.0.1:8000](http://12
 
 ### Application Features
 
-1. **User Registration**: Users can register for a COVID-19 vaccination, selecting a vaccine center at the time of registration. Duplicate registrations are not allowed.
-2. **Vaccination Scheduling**: The system automatically schedules users based on a "first-come, first-served" strategy while considering each center's daily limit.
+1. **User Registration**: Users can register for a COVID-19 vaccination, selecting a vaccine center at the time of registration. Duplicate registrations are not allowed based on NID and Email.
+2. **Vaccination Scheduling**: The system automatically schedules users based on a "first-come, first-served" strategy while considering each center's daily limit. and also consider a buffer time at least one day.
 3. **Search Vaccination Status**: Users can check their vaccination status using their NID. The statuses can be:
    - `Not registered`
    - `Not scheduled`
    - `Scheduled`
    - `Vaccinated`
+and if a user's vaccinated date is over, the app will automatically change the status as vaccinated.
+
 4. **Email Notifications**: Users receive a notification email at 9 PM the night before their vaccination date.
 5. **Performance Optimizations**: Optimized database queries and indexed key fields (like NID) for fast lookups during search and registration.
 
