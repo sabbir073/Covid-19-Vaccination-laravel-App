@@ -21,7 +21,7 @@ This project is a COVID-19 Vaccination Registration system built using the follo
 To run this project locally, you will need the following:
 
 - **PHP** (version 8.3.9 or higher)
-- **Composer** (version 2.x or higher)
+- **Composer** (version 2.7.7 or higher)
 - **Node.js** (version 22.9.0 or higher)
 - **NPM** (version 10.8.1 or higher)
 - **MySQL** (or any other database you prefer)
@@ -31,8 +31,8 @@ To run this project locally, you will need the following:
 Clone the repository from GitHub and navigate into the project folder:
 
 ```bash
-git clone https://github.com/your-username/vaccination-system.git
-cd vaccination-system
+git clone https://github.com/sabbir073/Covid-19-Vaccination-laravel-App.git
+cd Covid-19-Vaccination-laravel-App
 ```
 
 ### Installing Dependencies
@@ -50,12 +50,6 @@ npm install
 ```
 
 ### Setting up the Environment
-
-Copy the `.env.example` file to create a `.env` file and configure it to your environment:
-
-```bash
-cp .env.example .env
-```
 
 Open the `.env` file in a text editor and update the following variables to connect to your MySQL database:
 
@@ -89,6 +83,11 @@ After setting up the environment, run the following commands to create and seed 
 
 ```bash
 php artisan migrate
+```
+If you see any errors in migration, run this command
+
+```bash
+php artisan migrate:fresh
 ```
 
 2. **Seed the database** with vaccine centers:
